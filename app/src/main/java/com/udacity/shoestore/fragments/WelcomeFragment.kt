@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
 
@@ -15,6 +16,7 @@ class WelcomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+    // TODO 3: should I use View or View?
     ): View? {
         // Inflate the layout for this fragment
         val binding: FragmentWelcomeBinding =

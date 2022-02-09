@@ -1,10 +1,26 @@
 <resources>
     <string name="app_name">ShoeStore</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">login</string>
-    <string name="already_have_an_account">Already have an account</string>
+    <string name="already_have_an_account">Already have an account?</string>
     <string name="register">Register</string>
+    <string name="add_new_shoe">Add new shoe</string>
+    <string name="logout">Logout</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="enter_shoe_name">enter shoe name</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="enter_shoe_company">enter shoe company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="enter_shoe_size">enter shoe size</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="enter_shoe_description">enter shoe description</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="size">Size: %s</string>
+    <string name="this_is_a_shoes_inventory_app">This is a shoes inventory app</string>
+    <string name="description_of_the_app">You can see and add different shoes that you like</string>
+    <string name="next">Next</string>
+    <string name="explain_how_to_add_shoe">To Add a Shoe: navigate to the next screen and there will be a plus button When you press the button you can add a shoe by specifying its name and brand and its size and a description of it</string>
+    <string name="You_will_new_shoe_in_listScreen">After pressing the save button you will see your new shoe added to the shoe list screen</string>
 </resources>
