@@ -28,7 +28,6 @@ class ShoeFragment : Fragment() {
             DataBindingUtil.inflate(inflater, R.layout.fragment_shoe, container, false)
 
         binding.fab.setOnClickListener {
-            //TODO 2: What is the difference between "it.findNavController()" and using only "findNavController()" as below
             findNavController().navigate(ShoeFragmentDirections.actionShoeFragmentToShoeDetailsFragment())
         }
 

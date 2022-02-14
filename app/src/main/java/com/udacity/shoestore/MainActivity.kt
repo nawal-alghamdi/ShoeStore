@@ -19,10 +19,6 @@ class MainActivity : AppCompatActivity() {
 
         val navController = this.findNavController(R.id.nav_host_fragment)
 
-        // TODO 1: I have a question: can I use
-        // NavigationUI.setupActionBarWithNavController(this, navController)
-        // instead of the 3 steps below? I can't understand what the difference
-        // because all of them have the same result
         setSupportActionBar(binding.toolbar)
         val appBarConfiguration = AppBarConfiguration.Builder(
             R.id.loginFragment,

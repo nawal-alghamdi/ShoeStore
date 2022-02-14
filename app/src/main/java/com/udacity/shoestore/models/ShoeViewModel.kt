@@ -36,7 +36,6 @@ class ShoeViewModel : ViewModel() {
     }
 
     fun initTextView(textView: TextView, parentView: LinearLayout, textValue: String) {
-        // TODO 4: Is it ok to  pass a context to a viewModel function? ex: in this fun, not to the viewModel itself
         textView.layoutParams = LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
