@@ -50,21 +50,18 @@ class ShoeDetailsFragment : Fragment() {
         // Observe the value of eventSaveShoe and check if it's set to true
         binding?.viewModel?.eventSaveShoe?.observe(viewLifecycleOwner, { save ->
             if (save) {
-                binding?.apply {
-                    val shoeName = shoeNameEditText.text.toString().trim()
-                    val shoeSize = shoeSizeEditText.text.toString().trim()
-                    val shoeCompany = shoeCompanyEditText.text.toString().trim()
-                    val shoeDescription = shoeDescriptionEditText.text.toString().trim()
+                val name = sharedViewModel.shoeNameValue.value?.trim()
+                val size = sharedViewModel.shoeSizeValue.value?.trim()
+                val company = sharedViewModel.shoeCompanyValue.value?.trim()
+                val description = sharedViewModel.shoeDescriptionValue.value?.trim()
 
-                    if (shoeName.isNotEmpty() && shoeSize.isNotEmpty() && shoeCompany.isNotEmpty() && shoeDescription.isNotEmpty()) {
-                        sharedViewModel.addShoe(
-                            shoeName,
-                            shoeSize.toDouble(),
-                            shoeCompany,
-                            shoeDescription
-                        )
-                        findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsFragmentToShoeFragment())
-                    } else Toast.makeText(
+                if (name?.isNotEmpty() == true && size?.isNotEmpty() == true &&
+                    company?.isNotEmpty() == true && description?.isNotEmpty() == true
+                ) {
+                    sharedViewModel.addShoe(name, size.toDouble(), company, description)
+                    findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsFragmentToShoeFragment())
+                } else {
+                    Toast.makeText(
                         context,
                         "Please fill all the details for the shoe",
                         Toast.LENGTH_SHORT
@@ -83,6 +80,7 @@ class ShoeDetailsFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
+        sharedViewModel.destroyLiveDateValues()
     }
 
 }

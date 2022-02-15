@@ -43,6 +43,7 @@
             android:hint="@string/enter_shoe_name"
             android:inputType="text"
             android:minHeight="48dp"
+            android:text="@={viewModel.shoeNameValue}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shoeName_textView" />
 
@@ -69,6 +70,7 @@
             android:hint="@string/enter_shoe_company"
             android:inputType="text"
             android:minHeight="48dp"
+            android:text="@={viewModel.shoeCompanyValue}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shoeCompany_textView" />
 
@@ -95,6 +97,7 @@
             android:hint="@string/enter_shoe_size"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
+            android:text="@={viewModel.shoeSizeValue}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/shoeSize_textView" />
 
@@ -121,6 +124,7 @@
             android:hint="@string/enter_shoe_description"
             android:inputType="date|text"
             android:minHeight="48dp"
+            android:text="@={viewModel.shoeDescriptionValue}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shoeDescription_textView" />
 

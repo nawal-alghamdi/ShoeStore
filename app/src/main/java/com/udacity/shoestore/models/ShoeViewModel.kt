@@ -17,6 +17,11 @@ class ShoeViewModel : ViewModel() {
     val eventSaveShoe: LiveData<Boolean>
         get() = _eventSaveShoe
 
+    val shoeNameValue = MutableLiveData<String>()
+    val shoeSizeValue = MutableLiveData<String>()
+    val shoeCompanyValue = MutableLiveData<String>()
+    val shoeDescriptionValue = MutableLiveData<String>()
+
     init {
         _shoeList.value = ArrayList()
     }
@@ -35,7 +40,15 @@ class ShoeViewModel : ViewModel() {
         _eventSaveShoe.value = false
     }
 
-    fun initTextView(textView: TextView, parentView: LinearLayout, textValue: String) {
+    // When adding a new shoe, we don't want to have the previous values of the editTexts get shown
+    fun destroyLiveDateValues() {
+        shoeNameValue.value = ""
+        shoeCompanyValue.value = ""
+        shoeSizeValue.value = ""
+        shoeDescriptionValue.value = ""
+    }
+
+    fun initTextView(textView: TextView, parentView: LinearLayout, textValue: String?) {
         textView.layoutParams = LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
